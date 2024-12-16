@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apple Support Bot - Умная поддержка для ваших устройств</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@400;500;600;700&display=swap">
+    <meta name="description" content="Интеллектуальный помощник для устройств Apple с поддержкой 24/7. Мгновенное решение проблем с iPhone, iPad, Mac и других устройств.">
+    <meta name="keywords" content="Apple support, техподдержка Apple, помощь iPhone, решение проблем Mac">
+    <meta name="author" content="Support Bot">
+    <meta property="og:title" content="Apple Support Bot - Умная поддержка для ваших устройств">
+    <meta property="og:description" content="Мгновенное решение любых проблем с вашими устройствами Apple">
+    <meta property="og:image" content="favicon.ico">
+    <link rel="icon" type="image/png" href="favicon.ico">
+</head>
+<body>
+    <nav class="nav-bar">
+        <div class="logo">
+            <svg class="apple-logo" width="20" height="20" viewBox="0 0 170 170">
+                <path fill="currentColor" d="M150.37 130.25c-2.45 5.66-5.35 10.87-8.71 15.66-4.58 6.53-8.33 11.05-11.22 13.56-4.48 4.12-9.28 6.23-14.42 6.35-3.69 0-8.14-1.05-13.32-3.18-5.197-2.12-9.973-3.17-14.34-3.17-4.58 0-9.492 1.05-14.746 3.17-5.262 2.13-9.501 3.24-12.742 3.35-4.929 0.21-9.842-1.96-14.746-6.52-3.13-2.73-7.045-7.41-11.735-14.04-5.032-7.08-9.169-15.29-12.41-24.65-3.471-10.11-5.211-19.9-5.211-29.378 0-10.857 2.346-20.221 7.045-28.068 3.693-6.303 8.606-11.275 14.755-14.925s12.793-5.51 19.948-5.629c3.915 0 9.049 1.211 15.429 3.591 6.362 2.388 10.447 3.599 12.238 3.599 1.339 0 5.877-1.416 13.57-4.239 7.275-2.618 13.415-3.702 18.445-3.275 13.63 1.1 23.87 6.473 30.68 16.153-12.19 7.386-18.22 17.731-18.1 31.002 0.11 10.337 3.86 18.939 11.23 25.769 3.34 3.17 7.07 5.62 11.22 7.36-0.9 2.61-1.85 5.11-2.86 7.51zM119.11 7.24c0 8.102-2.96 15.667-8.86 22.669-7.12 8.324-15.732 13.134-25.071 12.375a25.222 25.222 0 0 1-.188-3.07c0-7.778 3.386-16.102 9.399-22.908 3.002-3.446 6.82-6.311 11.45-8.597 4.62-2.252 8.99-3.497 13.1-3.71 0.12 1.083 0.17 2.166 0.17 3.24z"/>
+            </svg>
+            <span>Support Bot</span>
+        </div>
+        <div class="nav-links">
+            <a href="#features" class="nav-link">Возможности</a>
+
+            <a href="#security" class="nav-link">Безопасность</a>
+            <a href="#faq" class="nav-link">FAQ</a>
+            <a href="#download" class="download-btn">Попробовать сейчас</a>
+        </div>
+        <button class="mobile-menu-btn" aria-label="Меню">
+            <span></span><span></span><span></span>
+        </button>
+    </nav>
+
+    <!-- Главный экран -->
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Интеллектуальная поддержка Apple</h1>
+            <p class="subtitle">Мгновенное решение любых проблем с вашими устройствами Apple</p>
+            <ul class="hero-features">
+                <li>✓ Мгновенные ответы 24/7</li>
+                <li>✓ Поддержка всех устройств Apple</li>
+                <li>✓ Точность ответов 99.9%</li>
+            </ul>
+            <div class="hero-buttons">
+                <button class="primary-btn">Начать общение</button>
+                <button class="secondary-btn">Узнать больше</button>
+            </div>
+        </div>
+        <div class="hero-visual">
+            <div class="particles">
+                <!-- Добавить анимированные частицы -->
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+            </div>
+            <div class="hero-features">
+                <div class="feature-badge">
+                    <span class="badge-icon">⚡️</span>
+                    <span class="badge-text">Мгновенные ответы</span>
+                </div>
+                <div class="feature-badge">
+                    <span class="badge-icon">🔒</span>
+                    <span class="badge-text">Безопасность данных</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Статистика -->
+    <section class="stats">
+        <div class="stat-item">
+            <div class="stat-number">1M+</div>
+            <div class="stat-label">Решённых проблем</div>
+        </div>
+        <div class="stat-item">
+            <div class="stat-number">50K+</div>
+            <div class="stat-label">Активных пользователей</div>
+        </div>
+        <div class="stat-item">
+            <div class="stat-number">24/7</div>
+            <div class="stat-label">Поддержка</div>
+        </div>
+    </section>
+
+    <!-- Возможности -->
+    <section class="features" id="features">
+        <div class="section-header">
+            <span class="overline">Возможности</span>
+            <h2>Всё необходимое для решения проблем</h2>
+            <p class="section-description">Умный помощник, который действительно понимает ваши устройства</p>
+        </div>
+        
+        <div class="features-grid">
+            <div class="feature-card" data-scroll>
+                <div class="feature-icon">🧠</div>
+                <h3>Умный помощник</h3>
+                <p class="feature-description">Интеллектуальная система, которая понимает ваши проблемы и находит оптимальные решения</p>
+                <ul class="feature-list">
+                    <li>Персональные рекомендации</li>
+                    <li>Понимание контекста</li>
+                    <li>Адаптивное обучение</li>
+                </ul>
+            </div>
+
+            <div class="feature-card" data-scroll>
+                <div class="feature-icon">⚡️</div>
+                <h3>Быстрая диагностика</h3>
+                <p class="feature-description">Мгновенное определение проблем и поиск эффективных решений</p>
+                <ul class="feature-list">
+                    <li>Автоматическое сканирование</li>
+                    <li>Точная идентификация</li>
+                    <li>Быстрый анализ</li>
+                </ul>
+            </div>
+
+            <div class="feature-card" data-scroll>
+                <div class="feature-icon">🔒</div>
+                <h3>Безопасность данных</h3>
+                <p class="feature-description">Надежная защита всей информации и конфиденциальность пользователей</p>
+                <ul class="feature-list">
+                    <li>Шифрование данных</li>
+                    <li>Защищенные соединения</li>
+                    <li>Приватность общения</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="how-it-works" id="how">
+        <div class="section-header">
+            <span class="overline">Процесс</span>
+            <h2>Как работает Support Bot</h2>
+            <p class="section-description">Простое решение сложных проблем</p>
+        </div>
+        
+        <div class="process-flow">
+            <div class="process-step" data-scroll>
+                <div class="step-icon">
+                    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M17 2H7C5.89543 2 5 2.89543 5 4V20C5 21.1046 5.89543 22 7 22H17C18.1046 22 19 21.1046 19 20V4C19 2.89543 18.1046 2 17 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        <path d="M12 18H12.01" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        <rect x="8" y="6" width="8" height="8" rx="1" stroke="currentColor" stroke-width="2"/>
+                    </svg>
+                </div>
+                <h3>Установка</h3>
+                <p>Установите приложение на ваше устройство iOS, Android или Windows</p>
+                <div class="step-progress">
+                    <div class="progress-line"></div>
+                    <div class="progress-number">1</div>
+                </div>
+            </div>
+    
+            <div class="process-step" data-scroll>
+                <div class="step-icon">
+                    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2"/>
+                        <path d="M20 20L16 16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                </div>
+                <h3>Диагностика</h3>
+                <p>Умный помощник анализирует ситуацию и мгновенно находит решение вашей проблемы</p>
+                <div class="step-progress">
+                    <div class="progress-line"></div>
+                    <div class="progress-number">2</div>
+                </div>
+            </div>
+    
+            <div class="process-step" data-scroll>
+                <div class="step-icon">
+                    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 2V6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        <path d="M12 18V22" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        <path d="M4.93 4.93L7.76 7.76" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        <path d="M16.24 16.24L19.07 19.07" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        <path d="M2 12H6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        <path d="M18 12H22" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        <path d="M4.93 19.07L7.76 16.24" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        <path d="M16.24 7.76L19.07 4.93" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                </div>
+                <h3>Решение</h3>
+                <p>Получите точное решение проблемы и пошаговые инструкции</p>
+                <div class="step-progress">
+                    <div class="progress-number">3</div>
+                </div>
+            </div>
+        </div>
+        <div class="demo-chat" data-scroll>
+            <div class="chat-container">
+                <div class="chat-header">
+                    <span class="chat-status">Support Bot</span>
+                </div>
+                <div class="chat-messages">
+                    <div class="chat-message assistant">
+                        Здравствуйте! Я помогу решить проблему с вашим устройством. Опишите, что случилось?
+                    </div>
+                    <div class="chat-message user">
+                        У меня быстро разряжается iPhone
+                    </div>
+                    <div class="chat-message assistant">
+                        Хорошо, давайте проверим основные причины:
+                        1. Проверьте настройки фонового обновления
+                        2. Отключите геолокацию для неиспользуемых приложений
+                        3. Проверьте состояние батареи
+        
+                        Хотите, я покажу как это сделать пошагово?
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+        <!-- Безопасность -->
+        <section class="security" id="security">
+            <div class="section-header">
+                <span class="overline">Безопасность</span>
+                <h2>Ваши данные под надёжной защитой</h2>
+                <p class="section-description">Соответствие всем стандартам безопасности Apple</p>
+            </div>
+            <div class="security-grid">
+                <div class="security-card">
+                    <div class="security-icon">🔒</div>
+                    <h3>End-to-End шифрование</h3>
+                    <p>Все данные передаются в зашифрованном виде по протоколу SSL/TLS</p>
+                    <ul class="security-features">
+                        <li>256-битное шифрование</li>
+                        <li>Защищенное соединение</li>
+                        <li>Безопасная авторизация</li>
+                    </ul>
+                </div>
+                <div class="security-card">
+                    <div class="security-icon">🛡️</div>
+                    <h3>Проверка Apple</h3>
+                    <p>Сертифицированное приложение, прошедшее проверку Apple</p>
+                    <ul class="security-features">
+                        <li>App Store безопасность</li>
+                        <li>Регулярные обновления</li>
+                        <li>Защита от вредоносного ПО</li>
+                    </ul>
+                </div>
+                <div class="security-card">
+                    <div class="security-icon">🔐</div>
+                    <h3>Конфиденциальность</h3>
+                    <p>Полное соответствие политике конфиденциальности Apple</p>
+                    <ul class="security-features">
+                        <li>Защита личных данных</li>
+                        <li>Соответствие GDPR</li>
+                        <li>Контроль доступа</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    
+        <!-- FAQ -->
+        <section class="faq" id="faq">
+            <div class="section-header">
+                <span class="overline">FAQ</span>
+                <h2>Частые вопросы</h2>
+                <p class="section-description">Всё, что нужно знать о Support Bot</p>
+            </div>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Как начать использовать Support Bot?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Просто скачайте приложение по кнопке на сайте и следуйте инструкциям по настройке. Весь процесс занимает менее минуты.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Какие устройства поддерживаются?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <ul>
+                            <p>В данный момент поддерживаются только Android и Windows</p>
+                        </ul>
+                    </div>
+                </div>
+                <div class="faq-item" data-scroll>
+                    <div class="faq-question">
+                        <h3>Как это работает?</h3>
+                        <button class="faq-toggle" aria-label="Открыть ответ">
+                            <span class="toggle-icon">+</span>
+                        </button>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Support Bot - это умный помощник, который анализирует проблемы и предлагает оптимальные решения.</p>
+                        <ul class="faq-details">
+                            <li>Умная диагностика проблем</li>
+                            <li>Интеллектуальные пошаговые инструкции</li>
+                            <li>Адаптивные рекомендации</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="testimonials" id="testimonials">
+            <div class="section-header">
+                <span class="overline">Отзывы</span>
+                <h2>Люди нам доверяют</h2>
+                <p class="section-description">Что говорят наши пользователи</p>
+            </div>
+            
+            <div class="testimonials-grid">
+                <div class="testimonial-card" data-scroll>
+                    <div class="testimonial-rating">★★★★★</div>
+                    <p class="testimonial-text">
+                        "Support Bot помог решить проблему за считанные минуты. Очень доступные инструкции и быстрый результат!"
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="author-info">
+                            <h4>Михаил С.</h4>
+                            <span>iPhone 14 Pro</span>
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="testimonial-card" data-scroll>
+                    <div class="testimonial-rating">★★★★★</div>
+                    <p class="testimonial-text">
+                        "Удобный помощник, который действительно разбирается в технике Apple. Рекомендую!"
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="author-info">
+                            <h4>Анна В.</h4>
+                            <span>MacBook Air</span>
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="testimonial-card" data-scroll>
+                    <div class="testimonial-rating">★★★★★</div>
+                    <p class="testimonial-text">
+                        "Сэкономил время и деньги на походе в сервис. Всё решилось через приложение!"
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="author-info">
+                            <h4>Дмитрий К.</h4>
+                            <span>iPad Pro</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    
+        <!-- CTA -->
+        <section class="cta">
+            <div class="cta-content">
+                <h2>Готовы начать?</h2>
+                <p>Присоединяйтесь к тысячам довольных пользователей Support Bot</p>
+                <div class="cta-buttons">
+                    <button class="primary-btn">Скачать сейчас</button>
+
+                </div>
+            </div>
+        </section>
+    
+        <div class="contact-floating">
+            <button class="contact-btn" aria-label="Связаться с нами">
+                <span class="contact-icon">💬</span>
+            </button>
+            
+            <div class="contact-panel">
+                <div class="contact-header">
+                    <h3>Нужна помощь?</h3>
+                    <button class="close-panel" aria-label="Закрыть">×</button>
+                </div>
+                <div class="contact-content">
+                    <a href="mailto:support@supportbot.com" class="contact-item">
+                        <span class="contact-icon">✉️</span>
+                        <div class="contact-info">
+                            <span class="contact-label">Email</span>
+                            <span class="contact-value">harimassaa@gmail.com</span>
+                        </div>
+                    </a>
+                    <div class="social-links">
+                        <a href="https://t.me/ifemboypig" class="contact-item">
+                            <span class="contact-icon">📱</span>
+                            <span>Telegram</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script>
+        // Анимация при скролле
+        const scrollElements = document.querySelectorAll('[data-scroll]');
+        
+        const elementInView = (el) => {
+            const elementTop = el.getBoundingClientRect().top;
+            return elementTop <= window.innerHeight;
+        };
+        
+        const displayScrollElement = (element) => {
+            element.classList.add('is-visible');
+        };
+        
+        const handleScrollAnimation = () => {
+            scrollElements.forEach((el) => {
+                if (elementInView(el)) {
+                    displayScrollElement(el);
+                }
+            });
+        };
+        
+        window.addEventListener('scroll', handleScrollAnimation);
+        
+        // FAQ аккордеон
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const item = question.parentElement;
+                item.classList.toggle('active');
+            });
+        });
+        // Контактная панель
+const contactBtn = document.querySelector('.contact-btn');
+const contactPanel = document.querySelector('.contact-panel');
+const closePanel = document.querySelector('.close-panel');
+
+contactBtn.addEventListener('click', () => {
+    contactPanel.classList.toggle('active');
+});
+
+closePanel.addEventListener('click', () => {
+    contactPanel.classList.remove('active');
+});
+
+// Закрытие панели при клике вне её
+document.addEventListener('click', (e) => {
+    if (!contactPanel.contains(e.target) && !contactBtn.contains(e.target)) {
+        contactPanel.classList.remove('active');
+    }
+});
+// Плавная прокрутка навигации
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
+
+// Изменение навбара при скролле
+window.addEventListener('scroll', () => {
+    const nav = document.querySelector('.nav-bar');
+    if (window.scrollY > 50) {
+        nav.classList.add('scrolled');
+    } else {
+        nav.classList.remove('scrolled');
+    }
+});
+
+// Анимация появления элементов
+const observerOptions = {
+    threshold: 0.1
+};
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+        }
+    });
+}, observerOptions);
+
+document.querySelectorAll('[data-scroll]').forEach((el) => observer.observe(el));
+
+
+// Мобильное меню
+const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+const navLinks = document.querySelector('.nav-links');
+
+mobileMenuBtn.addEventListener('click', () => {
+    // Переключаем класс active для меню
+    navLinks.classList.toggle('active');
+    
+    // Анимируем кнопку бургер-меню
+    mobileMenuBtn.classList.toggle('active');
+    
+    // Предотвращаем прокрутку body когда меню открыто
+    document.body.classList.toggle('menu-open');
+});
+
+// Закрываем меню при клике на ссылку
+document.querySelectorAll('.nav-link').forEach(link => {
+    link.addEventListener('click', () => {
+        navLinks.classList.remove('active');
+        mobileMenuBtn.classList.remove('active');
+        document.body.classList.remove('menu-open');
+    });
+});
+
+    </script>
+    </html>
